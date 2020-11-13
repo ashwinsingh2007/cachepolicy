@@ -11,7 +11,7 @@ class NodeStruct {
     }
 }
 
-class LRU {
+class MRU {
     constructor(cacheLimit = 5) {
         this.size = 0;
         this.cacheLimit = cacheLimit;
@@ -67,10 +67,10 @@ class LRU {
     }
 }
 
-let lruCache = new LRU();
+let mruCache = new MRU();
 const a = ['A', 'B', 'C', 'D', 'E', 'F', 'C', 'G', 'B'];
 a.forEach((v, i) => {
-  lruCache.insert(i, v);  
+    mruCache.insert(i, v);  
 });
 
-console.log('lruCache---', lruCache.stateOfCache())
+console.log('mruCache---', mruCache.stateOfCache())
